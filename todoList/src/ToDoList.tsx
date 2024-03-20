@@ -16,7 +16,7 @@ const ToDoList: React.FC = () => {
 
     const fetchTodos = async () => {
         try {
-            const response = await fetch("http://localhost:3000/todoList");
+            const response = await fetch("https://todo-1-7uu0.onrender.com/todoList");
             if (!response.ok) {
                 throw new Error("Failed to fetch todos");
             }
@@ -31,7 +31,7 @@ const ToDoList: React.FC = () => {
 
     const handleToggle = async (id: number) => {
         try {
-            const response = await fetch(`http://localhost:3000/todoList/${id}`, {
+            const response = await fetch(`https://todo-1-7uu0.onrender.com/todoList/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -53,7 +53,7 @@ const ToDoList: React.FC = () => {
 
     const handleDelete = async (id: number) => {
         try {
-            const response = await fetch(`http://localhost:3000/todoList/${id}`, {
+            const response = await fetch(`https://todo-1-7uu0.onrender.com/todoList/${id}`, {
                 method: "DELETE"
             });
             if (!response.ok) {
@@ -68,7 +68,7 @@ const ToDoList: React.FC = () => {
     const handleClick = async () => {
         if (input.trim() !== "") {
             try {
-                const response = await fetch("http://localhost:3000/todoList", {
+                const response = await fetch("https://todo-1-7uu0.onrender.com/todoList", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
